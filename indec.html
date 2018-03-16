@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+
+    <title>AngularJS - ex</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js"></script> -->
+    <script src="exApp.js"></script>
+    <script src="exCtrl.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div ng-controller="FirstController">
+            <!-- <h1>{{msg}}</h1> -->
+            <h1>Actors</h1>
+            <hr>
+
+            <div ng-repeat="actor in actors">
+                <div class="card col-md-3">
+                    <!-- {{4+9}} -->
+
+
+                    <div class="card-body text-center">
+
+                        <a href="{{actor.imdbLink}}" target="_blank">
+                            <h4 class="card-title text-center">{{actor.fname}} {{actor.lname}}</h4>
+                        </a>
+                        <p class="card-text ">{{actor.bDate|date}}</p>
+                        <a href="{{actor.imdbLink}}" target="_blank">IMDB</a>
+                        <br>
+                        <img class="card-img-top" src="{{actor.photo}}" alt="Card image">
+                        <br>
+                    </div>
+                    <!-- <div class="card-body text-center">
+
+                        <a href="{{actor.imdbLink}}" target="_blank">
+                            <h4 class="card-title text-center">{{4+9}}</h4>
+                        </a>
+                        <p class="card-text ">BBBBB</p>
+                        <a href="#" target="_blank">IMDB</a>
+                        <br>
+                        <img class="card-img-top" src="#" alt="Card image">
+                        <br>
+                    </div> -->
+                    <br>
+                    <!-- <div class="card-header">                </div> -->
+                    <!-- <div class="card-body">Content</div> -->
+                    <!-- <div class="card-footer">Footer</div> -->
+                </div>
+            </div>
+        </div>
+        <!-- {{4+9}} -->
+    </div>
+</body>
+
+</html>
