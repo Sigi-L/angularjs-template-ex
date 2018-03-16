@@ -21,48 +21,36 @@
 
     <div class="container">
         <div ng-controller="FirstController">
-            <!-- <h1>{{msg}}</h1> -->
-            <h1>Actors</h1>
+            <h1 class="text-center">Actors</h1>
             <hr>
 
-            <div ng-repeat="actor in actors">
-                <div class="card col-md-4">
-                    <!-- {{4+9}} -->
 
-                    <div class="card-body text-center">
-
-                        <a href="{{actor.imdbLink}}" target="_blank">
-                            <h4 class="card-title text-center">{{actor.fname}} {{actor.lname}}</h4>
-                        </a>
-                        <p class="card-text ">{{actor.bDate|date}}</p>
-                        <a href="{{actor.imdbLink}}" target="_blank">IMDB</a>
-                        <br>
-                        <br>
-                        <img class="card-img-top" src="{{actor.photo}}" alt="Card image">
+            <div class="row">
+                <div class="col-md-4" ng-repeat="actor in actors">
+                    
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <a href="{{actor.imdbLink}}" target="_blank">
+                                <h4 class="card-title text-center">{{actor.fname}} {{actor.lname}}</h4>
+                            </a>
+                            <p class="card-text ">{{actor.bDate|date}}</p>
+                            <a href="{{actor.imdbLink}}" target="_blank">IMDB</a>
+                            <br>
+                            <br>
+                            <img class="card-img-top" src="{{actor.photo}}" alt="Card image">
+                            <br>
+                        </div>
                         <br>
                     </div>
-                   
-                    <!-- <div class="card-body text-center">
-
-                        <a href="{{actor.imdbLink}}" target="_blank">
-                            <h4 class="card-title text-center">{{4+9}}</h4>
-                        </a>
-                        <p class="card-text ">BBBBB</p>
-                        <a href="#" target="_blank">IMDB</a>
-                        <br>
-                        <img class="card-img-top" src="#" alt="Card image">
-                        <br>
-                    </div> -->
+                    
                     <br>
-                    <!-- <div class="card-header">                </div> -->
-                    <!-- <div class="card-body">Content</div> -->
-                    <!-- <div class="card-footer">Footer</div> -->
                 </div>
-                <br>
             </div>
+
+
         </div>
-        <!-- {{4+9}} -->
     </div>
+
 </body>
 
 </html>

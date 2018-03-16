@@ -21,24 +21,24 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
     var actor2 = new Actor("Dustin", "Hoffman",
         "https://ia.media-imdb.com/images/M/MV5BMTc3NzU0ODczMF5BMl5BanBnXkFtZTcwODEyMDY5Mg@@._V1_UY209_CR8,0,140,209_AL_.jpg",
         "http://www.imdb.com/name/nm0000163/?ref_=nmls_hd",
-         "08-08-1937");
+        "08-08-1937");
 
     var actor3 = new Actor("Paul", "Newman",
-        "https://ia.media-imdb.com/images/M/MV5BODUwMDYwNDg3N15BMl5BanBnXkFtZTcwODEzNTgxMw@@._V1_UY317_CR22,0,214,317_AL_.jpg", 
+        "https://ia.media-imdb.com/images/M/MV5BODUwMDYwNDg3N15BMl5BanBnXkFtZTcwODEzNTgxMw@@._V1_UY317_CR22,0,214,317_AL_.jpg",
         "http://www.imdb.com/name/nm0000056/?ref_=nmls_hd",
         "01-26-1925");
 
     var actor4 = new Actor("Charles", "Chaplin",
-        "https://ia.media-imdb.com/images/M/MV5BNDcwMDc0ODAzOF5BMl5BanBnXkFtZTgwNTY2OTI1MDE@._V1_UX214_CR0,0,214,317_AL_.jpg", 
+        "https://ia.media-imdb.com/images/M/MV5BNDcwMDc0ODAzOF5BMl5BanBnXkFtZTgwNTY2OTI1MDE@._V1_UX214_CR0,0,214,317_AL_.jpg",
         "http://www.imdb.com/name/nm0000122/?ref_=nmls_hd",
         "12-25-1889");
     var actor5 = new Actor("Johnny", "Depp",
-        "https://ia.media-imdb.com/images/M/MV5BMTM0ODU5Nzk2OV5BMl5BanBnXkFtZTcwMzI2ODgyNQ@@._V1_UY209_CR3,0,140,209_AL_.jpg", 
+        "https://ia.media-imdb.com/images/M/MV5BMTM0ODU5Nzk2OV5BMl5BanBnXkFtZTcwMzI2ODgyNQ@@._V1_UY209_CR3,0,140,209_AL_.jpg",
         "http://www.imdb.com/name/nm0000136/?ref_=nmls_hd",
         "06-09-1963");
 
     var actor6 = new Actor("Robert", "Redford",
-        "https://ia.media-imdb.com/images/M/MV5BMTk1Nzc5MzQyMV5BMl5BanBnXkFtZTcwNjQ5OTA0Mg@@._V1_UY209_CR5,0,140,209_AL_.jpg", 
+        "https://ia.media-imdb.com/images/M/MV5BMTk1Nzc5MzQyMV5BMl5BanBnXkFtZTcwNjQ5OTA0Mg@@._V1_UY209_CR5,0,140,209_AL_.jpg",
         "http://www.imdb.com/name/nm0000602/?ref_=nmls_hd",
         "08-18-1936");
 
