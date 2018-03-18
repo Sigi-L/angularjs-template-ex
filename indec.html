@@ -28,13 +28,13 @@
                 <input type="text" id="search1" ng-model="search1">
 
                 <label for="search2">Search Month:</label>
-                <input type="text" id="search2" ng-model="search2">
+                <input type="text" id="search2" ng-model="search2" min="1" max="12">
 
                 <label for="order1">Order By:</label>
                 <select ng-model="orderProp" id="order1">
-                    <option value="fname">f name</option>
-                    <option value="lname">l name</option>
-                    <option value="bDate">b Date</option>
+                    <option value="fname">First name</option>
+                    <option value="lname">Last name</option>
+                    <option value="bDate">Birth Date</option>
                 </select>
                 <br>
             </div>

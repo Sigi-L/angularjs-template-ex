@@ -47,7 +47,7 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
 
     // Initializing searchText so it won't be undefined before the user enters text
     $scope.search1 = "";
-    $scope.search2 = 0;
+    $scope.search2 = "";
 
     $scope.searchData = function (actor) {
         // Case insensitive search in model and brand properties
@@ -55,15 +55,17 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
         var namefilter = actor.fname.toLowerCase().includes($scope.search1.toLowerCase()) ||
             actor.lname.toLowerCase().includes($scope.search1.toLowerCase());
         var datefilter = true;
-        if ($scope.search2 > 0) {
-            ((actor.bDate.getMonth()) + 1) === ($scope.search2);
+        if ($scope.search2 !== "") {
+           if  ((actor.bDate.getMonth() + 1).toString() !== ($scope.search2)){
+                datefilter = false;
+           }
         }
-        return (namefilter);
+        return (namefilter && datefilter);
     }
 
 
     $scope.orderProp = "";
     $scope.changeSort = function (propName) {
-    $scope.orderProp = propName;
+        $scope.orderProp = propName;
     }
 }]);
