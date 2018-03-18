@@ -23,29 +23,26 @@
         <div ng-controller="exCtrl">
             <h1 class="text-center">Actors</h1>
             <hr>
-            <div class="mx-auto row">
-                <div class="col-sm-4 ">
-                    <label for="search1">Search Name:</label>
-                    <input type="text" id="search1" ng-model="search1">
+            <div class="row">
+                <div>
+                    <label  class="px-2" for="search1">Search Name:</label>
+                    <input class="px-2" type="text" id="search1" ng-model="search1">
                 </div>
-                <div class="col-sm-4">
-                    <label for="search2">Search Month:</label>
-                    <input type="text" id="search2" ng-model="search2" min="1" max="12">
+                <div >
+                    <label class="px-2" for="search2">Search Month:</label>
+                    <input class="px-2" type="text" id="search2" ng-model="search2" min="1" max="12">
                 </div>
-                <div class="col-sm-4 ">
-                    <label for="order1">Order By:</label>
-                    <select ng-model="orderProp" id="order1">
+                <div >
+                    <label class="px-2" for="order1">Order By:</label>
+                    <select class="px-2" ng-model="orderProp" id="order1">
                         <option value="fname">First name</option>
                         <option value="lname">Last name</option>
                         <option value="bDate">Birth Date</option>
                     </select>
                 </div>
+           
             </div>
-
             <hr>
-
-
-
             <fieldset class="form-group row ">
                 <form class="form-horizontal m-10">
 
