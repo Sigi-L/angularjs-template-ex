@@ -1,4 +1,4 @@
-myApp.controller('FirstController', ['$scope', function ($scope) {
+myApp.controller('exCtrl', ['$scope', function ($scope) {
     $scope.msg = 'This Must Work!';
 
     function Actor(fname, lname, photo, imdbLink, bDate) {

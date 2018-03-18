@@ -20,75 +20,91 @@
 <body>
 
     <div class="container">
-        <div ng-controller="FirstController">
+        <div ng-controller="exCtrl">
             <h1 class="text-center">Actors</h1>
             <hr>
-            <div class="mx-auto">
-                <label for="search1">Search Name:</label>
-                <input type="text" id="search1" ng-model="search1">
-
-                <label for="search2">Search Month:</label>
-                <input type="text" id="search2" ng-model="search2" min="1" max="12">
-                <br>
-                <br>
-                <label for="order1">Order By:</label>
-
-                <select ng-model="orderProp" id="order1">
-                    <option value="fname">First name</option>
-                    <option value="lname">Last name</option>
-                    <option value="bDate">Birth Date</option>
-                </select>
-                <br>
-                <hr>
-  <!--<form>
-    <fieldset>
-      <legend>Step 1</legend>
-
-      <div class="clearfix">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" />
-      </div>
-      <div class="clearfix">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Enter Password" />
-      </div>
-      <div class="clearfix">
-        <label for="password2">Repeat Password:</label>
-        <input type="password2" name="password2" id="password2" placeholder="Repeat Password" />
-      </div>
-
-    </fieldset>-->
-                <form>
-                    <div>
-                    <h5>Add Actor</h5>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" ng-model="newActor.fname" id="firstName">
-                    <br>
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" ng-model="newActor.lname" id="lastName">
-                    <br>
-                    <label for="photo">Photo Link:</label>
-                    <input type="text" ng-model="newActor.photo" id="photo">
-                    <br>
-                    <label for="imdbLink">IMDB Link:</label>
-                    <input type="text" ng-model="newActor.imdbLink" id="imdbLink">
-                    <br>
-                    <label for="bDate">Birth Date (MM-DD-YYY):</label>
-                    <input type="text" ng-model="newActor.bDate" id="bDate">
-                    <br>
-                    <br><br>
-                    <button ng-click="addActor()">Add Actor</button>
-                    <button ng-click="clearForm()">Clear</button>
-                    <div>
-                </form>
-
-                <br>
+            <div class="mx-auto row">
+                <div class="col-sm-4 ">
+                    <label for="search1">Search Name:</label>
+                    <input type="text" id="search1" ng-model="search1">
+                </div>
+                <div class="col-sm-4">
+                    <label for="search2">Search Month:</label>
+                    <input type="text" id="search2" ng-model="search2" min="1" max="12">
+                </div>
+                <div class="col-sm-4 ">
+                    <label for="order1">Order By:</label>
+                    <select ng-model="orderProp" id="order1">
+                        <option value="fname">First name</option>
+                        <option value="lname">Last name</option>
+                        <option value="bDate">Birth Date</option>
+                    </select>
+                </div>
             </div>
+
+            <hr>
+
+
+
+            <fieldset class="form-group row ">
+                <form class="form-horizontal m-10">
+
+                    <legend class="col-form-legend ">Add Actor</legend>
+
+
+                    <!-- <div class="clearfix"> -->
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4" for="firstName">First Name:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" ng-model="newActor.fname" id="firstName" name="firstName">
+                            <!-- <br> -->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4" for="lastName">Last Name:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control " type="text" ng-model="newActor.lname" id="lastName" name="lastName">
+                            <!-- <br> -->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4" for="photo">Photo Link:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control " type="text" ng-model="newActor.photo" id="photo" name="photo">
+                            <!-- <br> -->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4" for="imdbLink">IMDB Link:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control " type="text" ng-model="newActor.imdbLink" id="imdbLink" name="imdbLink">
+                            <!-- <br> -->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-4" for="bDate">Birth Date (MM-DD-YYY):</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" ng-model="newActor.bDate" id="bDate" name="bDate">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <button ng-click="addActor()">Add Actor</button>
+                        <button ng-click="clearForm()">Clear</button>
+                    </div>
+                    <!-- </div> -->
+
+                </form>
+            </fieldset>
+            <!-- </form> -->
+            <!-- </div> -->
+            <hr>
+
             <div class="row">
                 <div class="col-md-4" ng-repeat="actor in actors | filter: searchData | orderBy: orderProp">
 
-                    <div class="card">
-                        <div class="card-body text-center">
+                    <div class="card bg-warning">
+                        <div class="card-body text-center ">
                             <a href="{{actor.imdbLink}}" target="_blank">
                                 <h4 class="card-title text-center">{{actor.fullName()}}</h4>
                             </a>
