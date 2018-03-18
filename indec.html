@@ -23,11 +23,20 @@
         <div ng-controller="FirstController">
             <h1 class="text-center">Actors</h1>
             <hr>
+            <div class="m-auto">
+                <label for="search1">Search Name:</label>
+                <input type="text" id="search1" ng-model="search1">
 
-
+                <!--<label for="search2">Search Month:</label>
+                <input type="text" id="search2" ng-model="search2">-->
+                <br>
+                <!--<br>-->
+            </div>
             <div class="row">
-                <div class="col-md-4" ng-repeat="actor in actors">
-                    
+
+
+                <div class="col-md-4" ng-repeat="actor in actors | filter: searchData">
+
                     <div class="card">
                         <div class="card-body text-center">
                             <a href="{{actor.imdbLink}}" target="_blank">
@@ -42,7 +51,7 @@
                         </div>
                         <br>
                     </div>
-                    
+
                     <br>
                 </div>
             </div>

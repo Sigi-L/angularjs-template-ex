@@ -7,9 +7,9 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
         this.photo = photo;
         this.imdbLink = imdbLink;
         this.bDate = new Date(bDate);
-         this.fullName = function() {
-           return this.fname+" "+ this.lname;
-         }
+        this.fullName = function () {
+            return this.fname + " " + this.lname;
+        }
     }
 
     var actor1 = new Actor("Jack", "Nicholson",
@@ -44,4 +44,12 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
 
     $scope.actors = [actor1, actor2, actor3, actor4, actor5, actor6];
 
+
+    // Initializing searchText so it won't be undefined before the user enters text
+    $scope.search1 = "";
+    $scope.searchData = function (actor) {
+        // Case insensitive search in model and brand properties
+        return (actor.fname.toLowerCase().includes($scope.search1.toLowerCase()) ||
+            actor.lname.toLowerCase().includes($scope.search1.toLowerCase()));
+    }
 }]);
