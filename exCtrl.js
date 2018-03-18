@@ -7,9 +7,9 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
         this.photo = photo;
         this.imdbLink = imdbLink;
         this.bDate = new Date(bDate);
-        // this.age = function() {
-        //   return Math.round((new Date().getFullYear() - this.bDate.getFullYear()));
-        // }
+         this.fullName = function() {
+           return this.fname+" "+ this.lname;
+         }
     }
 
     var actor1 = new Actor("Jack", "Nicholson",
