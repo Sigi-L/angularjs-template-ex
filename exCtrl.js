@@ -6,7 +6,7 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
         this.lname = lname;
         this.photo = photo;
         this.imdbLink = imdbLink;
-        this.bDate = new Date(bDate);
+        this.bDate = bDate;
         this.fullName = function () {
             return this.fname + " " + this.lname;
         }
@@ -47,9 +47,14 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
 
     // Initializing searchText so it won't be undefined before the user enters text
     $scope.search1 = "";
+    $scope.search2 = "";
     $scope.searchData = function (actor) {
         // Case insensitive search in model and brand properties
-        return (actor.fname.toLowerCase().includes($scope.search1.toLowerCase()) ||
-            actor.lname.toLowerCase().includes($scope.search1.toLowerCase()));
+
+        var namefilter = actor.fname.toLowerCase().includes($scope.search1.toLowerCase()) ||
+            actor.lname.toLowerCase().includes($scope.search1.toLowerCase());
+
+        var datefilter = actor.bDate.includes($scope.search2);
+        return (datefilter && namefilter);
     }
 }]);
