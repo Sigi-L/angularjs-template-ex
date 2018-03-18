@@ -29,18 +29,45 @@
 
                 <label for="search2">Search Month:</label>
                 <input type="text" id="search2" ng-model="search2" min="1" max="12">
-
+                <br>
+                <br>
                 <label for="order1">Order By:</label>
+
                 <select ng-model="orderProp" id="order1">
                     <option value="fname">First name</option>
                     <option value="lname">Last name</option>
                     <option value="bDate">Birth Date</option>
                 </select>
                 <br>
+                <hr>
+
+                <form>
+                    <div>
+                    <h5>Add Actor</h5>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" ng-model="newActor.fname" id="firstName">
+                    <br>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" ng-model="newActor.lname" id="lastName">
+                    <br>
+                    <label for="photo">Photo Link:</label>
+                    <input type="text" ng-model="newActor.photo" id="photo">
+                    <br>
+                    <label for="imdbLink">IMDB Link:</label>
+                    <input type="text" ng-model="newActor.imdbLink" id="imdbLink">
+                    <br>
+                    <label for="bDate">Birth Date (MM-DD-YYY):</label>
+                    <input type="text" ng-model="newActor.bDate" id="bDate">
+                    <br>
+                    <br><br>
+                    <button ng-click="addActor()">Add Actor</button>
+                    <button ng-click="clearForm()">Clear</button>
+                    <div>
+                </form>
+
+                <br>
             </div>
             <div class="row">
-
-
                 <div class="col-md-4" ng-repeat="actor in actors | filter: searchData | orderBy: orderProp">
 
                     <div class="card">

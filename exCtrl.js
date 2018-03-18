@@ -56,9 +56,9 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
             actor.lname.toLowerCase().includes($scope.search1.toLowerCase());
         var datefilter = true;
         if ($scope.search2 !== "") {
-           if  ((actor.bDate.getMonth() + 1).toString() !== ($scope.search2)){
+            if ((actor.bDate.getMonth() + 1).toString() !== ($scope.search2)) {
                 datefilter = false;
-           }
+            }
         }
         return (namefilter && datefilter);
     }
@@ -68,4 +68,29 @@ myApp.controller('FirstController', ['$scope', function ($scope) {
     $scope.changeSort = function (propName) {
         $scope.orderProp = propName;
     }
+
+
+    $scope.addActor = function () {
+        var newActorObj = new Actor($scope.newActor.fname, $scope.newActor.lname,
+            $scope.newActor.photo, $scope.newActor.imdbLink, new Date($scope.newActor.bDate));
+
+        $scope.actors.push(newActorObj);
+    };
+    $scope.clearForm = function () {
+        $scope.newActor.fname = "";
+        $scope.newActor.lname = "";
+        $scope.newActor.photo = "";
+        $scope.newActor.imdbLink = "";
+        $scope.newActor.bDate = "";
+    };
+    // clearForm
+    // Julia Roberts
+    // https://ia.media-imdb.com/images/M/MV5BMTQzNjU3MDczN15BMl5BanBnXkFtZTYwNzY2Njc4._V1_UX214_CR0,0,214,317_AL_.jpg
+    // http://www.imdb.com/name/nm0000210/?ref_=nv_sr_3
+    // 10-28-1967
+    //   this.fname = fname;
+    //     this.lname = lname;
+    //     this.photo = photo;
+    //     this.imdbLink = imdbLink;
+    //     this.bDate = new Date(bDate);
 }]);
