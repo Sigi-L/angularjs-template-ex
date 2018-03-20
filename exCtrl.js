@@ -84,6 +84,16 @@ myApp.controller('exCtrl', ['$scope', function ($scope) {
         $scope.newActor.imdbLink = "";
         $scope.newActor.bDate = "";
     };
+
+    $scope.toggleActorSelected = function(actor) {
+
+        if (actor.selected) {
+            actor.selected = false;
+          } else {
+            actor.selected = true;
+          }
+        // actor.selected = !actor.selected;
+    }
     // clearForm
     // Julia Roberts
     // https://ia.media-imdb.com/images/M/MV5BMTQzNjU3MDczN15BMl5BanBnXkFtZTYwNzY2Njc4._V1_UX214_CR0,0,214,317_AL_.jpg
